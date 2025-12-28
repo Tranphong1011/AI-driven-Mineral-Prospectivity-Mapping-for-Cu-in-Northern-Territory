@@ -1,0 +1,27 @@
+name: nt-cu-prospectivity
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - pyarrow
+  - geopandas
+  - shapely
+  - pyproj
+  - rasterio
+  - rioxarray
+  - xarray
+  - scikit-learn
+  - joblib
+  - tqdm
+  - matplotlib
+  - pyyaml
+  - pip
+  - pip:
+      - typer
+      - rich
+      - pydantic
+      - shap
+      - pytest
+      - ruff

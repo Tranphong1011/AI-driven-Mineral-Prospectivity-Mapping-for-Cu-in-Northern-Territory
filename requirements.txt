@@ -1,0 +1,11 @@
+python-dotenv
+spicy
+pandas
+rasterio
+geopandas
+shapely
+fiona
+matplotlib
+numpy
+scikit-learn
+pyarrow
