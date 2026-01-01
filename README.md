@@ -9,7 +9,7 @@ This project integrates **geology, geochemistry, geophysics (magnetic + gravity 
 - **Uncertainty map** via ensemble standard deviation
 - **Explainability** via **SHAP (global + local)**
 
----
+
 
 ## 1) Problem Formulation (PU Learning)
 
@@ -20,7 +20,7 @@ We formulate copper prospectivity mapping as a **Positive–Unlabeled (PU)** bin
 
 The model outputs a **probabilistic prospectivity score** used for **ranking** and **target generation**, evaluated using **PR-AUC** and **Recall@K%** under **spatial block validation**.
 
----
+
 
 ## 2) Study Area & Spatial Reference
 
@@ -28,7 +28,7 @@ The model outputs a **probabilistic prospectivity score** used for **ranking** a
 - **Grid resolution:** **500 m**  
 - **CRS:** all datasets are standardized to **EPSG:28352 (GDA94 / MGA Zone 52)**
 
----
+
 
 ## 3) Data Sources (Public)
 
@@ -59,7 +59,7 @@ A large DEM dataset (~24 GB) is processed into rasters such as:
 - OZMIN mineral deposits database + STRIKE mineral occurrences (Cu)
 
 ### Data portals (URLs)
-```text
+
 STRIKE (Mineral Occurrences + Geochemistry): http://strike.nt.gov.au/wss.html
 GA Portal (Magnetic anomaly / GADDS): https://portal.ga.gov.au/persona/gadds
 GA eCat DEM metadata: https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/72759
@@ -71,7 +71,7 @@ GA eCat DEM metadata: https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/
   - **Binary target**: `y = 1` if `label > 0` else `0`
   - **Sample weighting** (positives only): `sample_weight` derived from **occurrence status/weight** (when provided)
 
----
+
 
 ## 5) Feature Engineering
 
@@ -98,7 +98,7 @@ GA eCat DEM metadata: https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/
 - aggregation within radius (e.g., **5 km**)
 - NaN-safe missing handling
 
----
+
 
 ## 6) Model & Training
 
@@ -131,7 +131,7 @@ For each setting:
   - `pred_mean.npy` = ensemble mean prospectivity score
   - `pred_std.npy`  = ensemble uncertainty (standard deviation)
 
----
+
 
 ## 7) Evaluation Metrics
 
@@ -151,7 +151,6 @@ Example results (current run):
 
 All metrics are exported to `metrics_all_repeats.csv`.
 
----
 
 ## 8) Explainability (XAI) — SHAP
 
@@ -183,7 +182,7 @@ Notebooks:
 
 ## 9) Project Structure (Updated)
 
-```text
+
 AI-driven-Mineral-Prospectivity-Mapping-for-Cu-in-Northern-Territory/
 ├── .gitignore
 ├── Makefile
