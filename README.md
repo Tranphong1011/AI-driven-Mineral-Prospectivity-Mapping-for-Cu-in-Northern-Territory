@@ -60,9 +60,9 @@ A large DEM dataset (~24 GB) is processed into rasters such as:
 
 ### Data portals (URLs)
 
-STRIKE (Mineral Occurrences + Geochemistry): http://strike.nt.gov.au/wss.html
-GA Portal (Magnetic anomaly / GADDS): https://portal.ga.gov.au/persona/gadds
-GA eCat DEM metadata: https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/72759
+- STRIKE (Mineral Occurrences + Geochemistry): http://strike.nt.gov.au/wss.html
+- GA Portal (Magnetic anomaly / GADDS): https://portal.ga.gov.au/persona/gadds
+- GA eCat DEM metadata: https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/72759
 
 ## 4) Labeling Strategy
 
@@ -178,77 +178,5 @@ Notebooks:
 - `notebooks/shap_global.ipynb`
 - `notebooks/shap_local_targets.ipynb`
 
-# Project Structure & Installation
-
-## 9) Project Structure (Updated)
-
-
-AI-driven-Mineral-Prospectivity-Mapping-for-Cu-in-Northern-Territory/
-├── .gitignore
-├── Makefile
-├── README.md
-├── configs/
-│   └── base.yaml
-├── environment.yml
-├── gis_env/
-├── notebooks/
-│   ├── 01_topology_analyse.ipynb
-│   ├── 02_geology_analyse.ipynb
-│   ├── 03_geophysics_analyse.ipynb
-│   ├── 04_mineral_deposit_analyse.ipynb
-│   ├── 05_geochemistry_analyse.ipynb
-│   ├── Analyse Result.ipynb
-│   ├── Prediction.ipynb
-│   ├── set_all_data_into_grid.ipynb
-│   ├── shap_global.ipynb
-│   └── shap_local_targets.ipynb
-├── pyproject.toml
-├── requirements.txt
-├── scripts/
-│   └── train_pu_ensemble_xgb.py
-├── src/
-│   └── nt_cu_prospectivity/
-│       ├── __init__.py
-│       ├── cli.py
-│       ├── config.py
-│       ├── explain/
-│       │   ├── __init__.py
-│       │   ├── shap_global.py
-│       │   └── shap_local.py
-│       ├── features/
-│       │   ├── __init__.py
-│       │   ├── assemble.py
-│       │   ├── geochemistry.py
-│       │   ├── geology.py
-│       │   ├── geophysics.py
-│       │   ├── grid.py
-│       │   └── topography.py
-│       ├── labels/
-│       │   ├── __init__.py
-│       │   ├── buffer.py
-│       │   ├── label_grid.py
-│       │   ├── ozmin.py
-│       │   └── logging.py
-│       ├── models/
-│       │   ├── __init__.py
-│       │   ├── io.py
-│       │   ├── metrics.py
-│       │   └── pu_ensemble.py
-│       ├── utils/
-│       │   ├── __init__.py
-│       │   ├── geoutils.py
-│       │   ├── io.py
-│       │   ├── raster.py
-│       │   └── vector.py
-│       └── viz/
-│           ├── __init__.py
-│           └── mapping.py
-├── tests/
-│   ├── test_config.py
-│   ├── test_grid.py
-│   └── test_metrics.py
-└── train/
-    ├── train_pu_ensemble.py
-    └── train_pu_ensemble_xgb.py
 
 
