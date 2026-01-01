@@ -10,7 +10,7 @@ This project integrates **geology, geochemistry, geophysics (magnetic + gravity 
 - **Explainability** via **SHAP (global + local)**
 
 
-
+![Cu potential map](Cu_potential_map.png)
 ## 1) Problem Formulation (PU Learning)
 
 We formulate copper prospectivity mapping as a **Positive–Unlabeled (PU)** binary classification problem:
